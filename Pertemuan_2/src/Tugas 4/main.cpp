@@ -30,7 +30,7 @@ void loop() {
   bool tombolDarurat = (digitalRead(buttonPin) == LOW);  // LOW = tombol ditekan (pulled-up)
 
   if (tombolDarurat) {
-    // Tombol darurat ditekan -> seluruh LED WAJIB mati, abaikan nilai potensiometer
+    // jika tombol darurat dipush maka semua LED mati dan mengabaikan potensiometer
     matikanSemuaLED();
     Serial.println("TOMBOL DARURAT DITEKAN - Semua LED MATI");
   } else {
@@ -58,5 +58,5 @@ void loop() {
     }
   }
 
-  delay(100);  // Delay pembacaan 100 ms sesuai instruksi
+  delay(100);  // delay pembacaan 100 ms 
 }
