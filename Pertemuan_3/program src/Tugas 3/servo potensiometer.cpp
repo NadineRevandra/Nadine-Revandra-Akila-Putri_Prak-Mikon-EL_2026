@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
   int potValue = analogRead(potPin); // Hasil: 0 - 4095 pwm pwm
-  int pwmValue = map(potValue, 0, 4095, 0, 255); // Konversi ke 0 - 255 pwm 
+  int pwmValue = map(potValue, 0, 4095, 0, 512); // Konversi ke 0 - 255 pwm 
   
   
   ledcWrite(channel, pwmValue);
